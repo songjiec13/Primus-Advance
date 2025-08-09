@@ -685,16 +685,12 @@ p {
   color: white;
   text-decoration: none;
   font-size: 1.25rem;
-  transition: background-color 0.3s ease;
-}
-
-
-.social-links a:first-child {
-  margin-left: 0;
+  transition: background-color 0.3s;
 }
 
 .social-links a:hover {
-  background-color: #af12ec; /* teal-500 */
+  background-color: #6a0dad; /* purple */
+  color: white;
 }
 
 .social-icon {
@@ -704,19 +700,218 @@ p {
   filter: invert(1); /* white icons inside dark background */
 }
 
-
-.footer-bottom {
-  border-top: 1px solid #334155;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding-top: 1rem;
-  text-align: center;
+/* Responsive fixes for smaller devices */
+@media (max-width: 1024px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 2rem 1rem;
+  }
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
 }
 
-.footer-bottom p {
-  font-size: 0.8rem;
-  color: #94a3b8;
-  margin: 0;
+@media (max-width: 640px) {
+  .footer-left, .footer-right {
+    max-width: 100%;
+    text-align: center;
+  }
+  .company-name {
+    font-size: 0.9rem;
+  }
+  .footer-title {
+    font-size: 1rem;
+  }
+  .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
+}
+
+/* Responsive tweaks added for mobile and tablet below */
+
+/* Tablet screens */
+@media (max-width: 1024px) {
+
+  /* Navbar padding smaller */
+  .navbar {
+    padding: 0 15px;
+  }
+
+  /* Hero text size smaller */
+  .hero h1 {
+    font-size: 3rem;
+  }
+  .hero p {
+    font-size: 0.9rem;
+  }
+
+  /* Content block stacks vertically */
+  .content-block {
+    flex-direction: column;
+    padding: 2rem;
+  }
+  .content-inner, .image-block {
+    flex: unset;
+    max-width: 100%;
+  }
+  .image-block {
+    max-width: 100%;
+    margin-top: 1.5rem;
+  }
+
+  /* Partnership section padding */
+  .partnership-section {
+    padding: 3rem 1.5rem;
+  }
+
+  /* Features grid 2 columns */
+  .features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Why choose card width */
+  .why-choose-card {
+    width: 60%;
+  }
+
+  /* Footer - stack footer top */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 2rem 1rem;
+    gap: 1.5rem;
+  }
+  .footer-right {
+    text-align: center;
+    width: 100%;
+  }
+}
+
+/* Mobile phones */
+@media (max-width: 640px) {
+
+  /* Navbar stack vertical */
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 0 10px;
+    gap: 10px;
+  }
+  .nav-links {
+    flex-wrap: wrap;
+    padding-right: 0;
+    margin-left: 0;
+  }
+  .nav-links li {
+    margin: 5px 10px 5px 0;
+  }
+
+  /* Hero text smaller */
+  .hero h1 {
+    font-size: 2rem;
+  }
+  .hero p {
+    font-size: 0.85rem;
+  }
+  .hero-content {
+    padding: 10px;
+    max-width: 90%;
+  }
+
+  /* Content block stacks vertical */
+  .content-block {
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.5rem;
+  }
+  .content-inner, .image-block {
+    flex: unset;
+    max-width: 100%;
+  }
+  .image-block {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+
+  /* Partnership padding */
+  .partnership-section {
+    padding: 2rem 1rem;
+  }
+
+  /* Features grid 1 column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Feature card width */
+  .feature-card {
+    width: 90%;
+  }
+
+  /* Product image adjustments */
+  .product-img {
+    max-height: 180px;
+    border-radius: 0.5rem;
+  }
+
+  /* Product container stack */
+  .product .container {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  /* Why choose card full width */
+  .why-choose-card {
+    width: 100%;
+  }
+
+  /* Contact content spacing */
+  .contact-content {
+    gap: 20px;
+  }
+
+  /* Contact info top stack vertically */
+  .contact-info-top {
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+  }
+
+  /* Footer - stack items vertically, center */
+  .footer-top {
+    flex-direction: column;
+    align-items: center;
+    margin: 0 1rem 2rem 1rem;
+    gap: 1rem;
+  }
+  .footer-left, .footer-right {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  /* Reduce font sizes for footer */
+  .company-name {
+    font-size: 0.9rem;
+  }
+  .footer-title {
+    font-size: 1rem;
+  }
+  .social-links a {
+    width: 35px;
+    height: 35px;
+    font-size: 1rem;
+  }
 }
 
 
+
+/* Scroll padding offset for fixed navbar on mobile */
+@media (max-width: 640px) {
+  html {
+    scroll-padding-top: 70px; /* offset fixed navbar height */
+  }
+}
