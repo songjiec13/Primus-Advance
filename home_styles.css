@@ -886,6 +886,16 @@ p {
     gap: 20px;
   }
 
+.contact-title {
+    font-size: 2.0rem;
+
+}
+
+.contact-subtitle {
+    font-size: 1.0  rem;
+
+}
+
   /* Contact info top stack vertically */
   .contact-info-top {
     flex-direction: column;
