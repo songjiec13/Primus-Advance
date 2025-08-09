@@ -23,6 +23,11 @@
             <li><a href="#product">Product</a></li>
             <li><a href="#contact">Contact Us</a></li>
         </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
     </nav>
 
 
@@ -193,7 +198,7 @@
                 <img src="Images\Phone.png" alt="Phone Icon">
             </div>
             <h3 class="contact-item-title">Whatsapp</h3>
-            <a href="https://wa.me/60123456789" class="contact-link">+60 12-345 6789</a>
+            <a href="Images\Whatsapp.png" class="contact-link">+60 12-345 6789</a>
         </div>
       </div>
 
@@ -248,6 +253,13 @@
 </footer>
 
   <script>
+    const hamburger = document.querySelector('.hamburger');
+    const navLinks = document.querySelector('.nav-links');
+
+    hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    });
+
     document.querySelectorAll('.feature-card').forEach(card => {
         const learnMore = card.querySelector('.learn-more');
         const learnLess = card.querySelector('.learn-less');
