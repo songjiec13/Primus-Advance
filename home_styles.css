@@ -383,6 +383,7 @@ p {
 
 .product-head h2 {
   font-size: 2.5rem;
+  margin-left: ;
   margin-bottom: 0.75rem;
   color: #0f172a;
 }
@@ -422,8 +423,8 @@ p {
 .service_head{
   margin: 0px 15px 50px 15px
 }
-.services h2{font-size:35px;margin:0 0 6px;text-align: center;}
-.sub{color:var(--muted);margin-bottom:18px;text-align: center;font-size: small;}
+.services h2{font-size:2.2rem;margin:0 0 6px;text-align: center;}
+.sub{color:var(--muted);margin-bottom:18px;text-align: center;font-size:1.1rem;}
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -586,6 +587,160 @@ p {
   text-decoration: underline;
 }
 
+/* LRP Section */
+.lrp-section {
+  background: url("Images/Background.png") no-repeat center center/cover;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.lrp-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  max-width: 1100px;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  padding: 40px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.lrp-image img {
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 12px;
+  display: block;
+}
+
+.lrp-description {
+  max-width: 550px;
+  text-align: left;
+}
+
+.lrp-title {
+  font-size: 2.5rem;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.lrp-text {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .lrp-container {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .lrp-description {
+    text-align: center;
+  }
+
+  .lrp-image img {
+    max-width: 300px;
+  }
+
+  .lrp-title {
+    font-size: 1.6rem;
+  }
+
+  .lrp-text {
+    font-size: 1rem;
+  }
+}
+
+/* ===== LRP Key Features Section ===== */
+.lrp-features-head {
+  padding-top: 20px;
+  margin: 0px 15px 50px 15px;
+}
+
+.lrp-features h2 {
+  font-size: 2.2rem;
+  margin: 0 0 6px;
+  text-align: center;
+}
+
+.lrp-features .sub {
+  color: var(--muted);
+  margin-bottom: 18px;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.lrp-features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  justify-items: center;
+}
+
+/* Tablet */
+@media (max-width: 1024px) {
+  .lrp-features-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Phone */
+@media (max-width: 640px) {
+  .lrp-features-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lrp-feature-card {
+  width: 280px;
+  aspect-ratio: 1 / 0.7;
+  background: #fffdf5;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+  transition: box-shadow 0.3s ease, transform 0.3s ease, background 0.3s ease;
+}
+
+.lrp-feature-card:hover {
+  background: linear-gradient(127deg, rgba(255, 204, 0, 0.2), rgba(255, 245, 200, 0.6));
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+  transform: translateY(-8px);
+}
+
+.lrp-feature-card .icon {
+  font-size: 2rem;
+  color: #ffcc00; /* Updated gold tone */
+  margin-bottom: 12px;
+}
+
+.lrp-feature-card h3 {
+  margin: 0 0 15px 0;
+  font-size: 1.5rem;
+  color: #111;
+}
+
+.lrp-feature-card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: #333;
+  line-height: 1.4;
+}
 
 
 /* Bottom: Why choose card */
