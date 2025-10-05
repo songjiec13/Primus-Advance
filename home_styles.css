@@ -359,22 +359,27 @@ p {
 }
 
 .product.section {
-  height: 50vh; /* half viewport height */
+  min-height: 50vh;          /* ✅ Fix: avoid Safari misalignment */
   display: flex;
-  align-items: center; /* vertically center content */
-  background: #f9fafb; /* light background for contrast */
-  color: #1f2937; /* dark slate */
+  align-items: center;        /* keep vertical centering */
+  justify-content: center;    /* ✅ helps keep both sides balanced */
+  background: #f9fafb;
+  color: #1f2937;
+  padding: 3rem 0;            /* ✅ adds breathing space top/bottom */
 }
+
 
 .product .container {
   display: flex;
+  align-items: center;
+  justify-content: space-between;  /* ✅ keeps image + text evenly aligned */
   width: 90%;
   max-width: 1100px;
   margin: 0 auto;
   gap: 2rem;
-  height: 100%;
-  align-items: center;
 }
+
+
 
 /* Description on the left */
 .product-descript {
